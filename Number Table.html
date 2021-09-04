@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .test{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: cadetblue;
+    }
+    #btn1{
+        margin-top: 10px;
+        background-color: black;
+        color: blanchedalmond;
+
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:90vh;
+
+    }
+
+    
+</style>
+<body>
+<div class="container">
+    <div class="test">
+            <h1>Feed the number to dispaly Table of that Number </h1>
+            <input type=text id="table1" placeholder="Enetr Number here">
+            <button type="button" id="btn1">Click here </button>
+            <p id="demo"></p>
+    </div>
+</div>
+    <script>
+        let inputnumber=document.getElementById("table1");
+        let button=document.getElementById("btn1");
+        button.onclick=handler;
+
+        function handler(){
+
+            let  number=inputnumber.value;
+            console.log(number);
+             let multiplication1="";
+            // let multiplication="";   
+            for (i=1;i<=10;i++){
+            //   multiplication += (number *i);
+                multiplication1 += (number +"x" + (i)+ "="+ (number*i)) + "<br/>";
+                  // document.getElementById("demo").innerHTML=multiplication1;
+              }
+             document.getElementById("demo").innerHTML=multiplication1;
+            // document.getElementById("demo").innerHTML=multiplication;
+            }
+
+
+    </script>
+    
+</body>
+</html>
