@@ -2,7 +2,7 @@
 FROM nginx:alpine
 
 # Copy the HTML and JavaScript files into the container
-COPY NumberTable.html.html /usr/share/nginx/html
+COPY NumberTable.html /usr/share/nginx/html
 COPY script.js /usr/share/nginx/html
 
 # Expose port 80 to allow access to the web server
