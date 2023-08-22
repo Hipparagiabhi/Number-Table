@@ -1,10 +1,6 @@
-# Use a base image with a web server to serve the HTML and JavaScript files
-FROM nginx:alpine
+FROM centos:7
+RUN yum install httpd -y
+COPY index.html /var/www/html/
+ENTRYPOINT ["/bin/bash","-c","/usr/sbin/httpd && bash"]
 
-# Copy the HTML and JavaScript files into the container
-COPY index.html /usr/share/nginx/html
-# COPY script.js /usr/share/nginx/html
-
-# Expose port 80 to allow access to the web server
-EXPOSE 80
 
