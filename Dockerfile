@@ -1,6 +1,6 @@
 FROM centos:7
 RUN yum install httpd -y
-COPY opt/docker/index.html /var/lib/jenkins/workspace/cicd_webapp
+COPY index.html /var/www/html
 ENTRYPOINT ["/bin/bash","-c","/usr/sbin/httpd && bash"]
 
 
